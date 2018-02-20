@@ -16,7 +16,7 @@
     .alpha(0.4);
 
   // load csv file and create the chart
-  d3.csv('data/cars.csv', function(data) {
+  d3.csv('data/wave2.csv', function(data) {
     parcoords
       .data(data)
       .hideAxis(["name"])
