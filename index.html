@@ -10,62 +10,132 @@
   </head>
   <body>
     <h1>World Values Survey</h1>
-    <div id="wave2" class="wave wave--show">Second Wave (1990 - 1994)</div>
-    <div id="wave3" class="wave">Third Wave (1995 - 1998)</div>
-    <div id="wave4" class="wave">Fourth Wave (1999 - 2004)</div>
-    <div id="wave5" class="wave">Fifth Wave (2005 - 2009)</div>
+    <div id="wave2" class="wave wave--show">Second Wave (1990 - 1994) →</div>
+    <div id="wave3" class="wave">Third Wave (1995 - 1998) →</div>
+    <div id="wave4" class="wave">Fourth Wave (1999 - 2004) →</div>
+    <div id="wave5" class="wave">Fifth Wave (2005 - 2009) →</div>
     <div id="wave6" class="wave">Sixth Wave (2010 - 2014)</div>
+
     <div class="main">
-      <div class="panel-row">
-        <div class="panel">
-          <div id="parcoord2" class="parcoords" style="height:400px;width:700px"></div>
+
+      <div id="wave2-block">
+        <div class="panel-row">
+          <div class="panel">
+            <div class="panel-title">Data Map</div>
+              <div id="map2" style="position: relative; width: 600px; height: 400px;"></div>
+          </div>
+          <div class="panel">
+              <div class="panel-title">Analysis</div>
+            <p>Lorem ipsum something very nice yadda yadda</p>
+          </div>
         </div>
-        <div class="panel">
-          <div id="grid2" class="grid"></div>
+  
+        <div class="panel-row">
+          <div class="panel">
+              <div class="panel-title">Parallel Coord.</div>
+            <div id="parcoord2" class="parcoords" style="height:400px;width:700px"></div>
+          </div>
+          <div class="panel">
+            <div class="panel-title">Data Table</div>
+            <div id="grid2" class="grid"></div>
+          </div>
         </div>
       </div>
 
-      <div class="panel-row">
-        <div class="panel">
-          <div id="parcoord3" class="parcoords" style="height:400px;;width:700px"></div>
+      <div id="wave3-block" class="hidden">
+        <div class="panel-row">
+          <div class="panel">
+            <div class="panel-title">Data Map</div>
+              <div id="map3" style="position: relative; width: 500px; height: 300px;"></div>
+          </div>
+          <div class="panel">
+              <div class="panel-title">Analysis</div>
+            <p>Lorem ipsum something very nice yadda yadda</p>
+          </div>
         </div>
-        <div class="panel">
-          <div id="grid3" class="grid"></div>
+
+        <div class="panel-row">
+          <div class="panel">
+            <div class="panel-title">Parallel Coord.</div>
+            <div id="parcoord3" class="parcoords" style="height:400px;;width:700px"></div>
+          </div>
+          <div class="panel">
+            <div id="grid3" class="grid"></div>
+          </div>
         </div>
       </div>
 
-      <div class="panel-row">
-        <div class="panel">
-          <div id="parcoord4" class="parcoords" style="height:400px;;width:700px"></div>
+      <div id="wave4-block" class="hidden">
+        <div class="panel-row">
+          <div class="panel">
+            <div class="panel-title">Data Map</div>
+            <div id="map4" style="position: relative; width: 500px; height: 300px;"></div>
+          </div>
+          <div class="panel">
+              <div class="panel-title">Analysis</div>
+            <p>Lorem ipsum something very nice yadda yadda</p>
+          </div>
         </div>
-        <div class="panel">
-          <div id="grid4" class="grid"></div>
+
+        <div class="panel-row">
+          <div class="panel">
+            <div class="panel-title">Parallel Coord.</div>
+            <div id="parcoord4" class="parcoords" style="height:400px;;width:700px"></div>
+          </div>
+          <div class="panel">
+            <div class="panel-title">Data Table</div>
+            <div id="grid4" class="grid"></div>
+          </div>
         </div>
       </div>
 
-      <div class="panel-row">
-        <div class="panel">
+      <div id="wave5-block" class="hidden">
+        <div class="panel-row">
+          <div class="panel">
+            <div class="panel-title">Data Map</div>
+            <div id="map5" style="position: relative; width: 500px; height: 300px;"></div>
+          </div>
+          <div class="panel">
+              <div class="panel-title">Analysis</div>
+            <p>Lorem ipsum something very nice yadda yadda</p>
+          </div>
+        </div>
+        <div class="panel-row">
+          <div class="panel">
+            <div class="panel-title">Parallel Coord.</div>
             <div id="parcoord5" class="parcoords" style="height:400px;;width:700px"></div>
-        </div>
-        <div class="panel">
+          </div>
+          <div class="panel">
+            <div class="panel-title">Data Table</div>
             <div id="grid5" class="grid"></div>
+          </div>
         </div>
       </div>
 
+    <div id="wave6-block" class="hidden">
       <div class="panel-row">
         <div class="panel">
+          <div class="panel-title">Data Map</div>
+          <div id="map6" style="position: relative; width: 500px; height: 300px;"></div>
+        </div>
+        <div class="panel">
+            <div class="panel-title">Analysis</div>
+          <p>Lorem ipsum something very nice yadda yadda</p>
+        </div>
+      </div>
+      <div class="panel-row">
+        <div class="panel">
+          <div class="panel-title">Parallel Coord.</div>
           <div id="parcoord6" class="parcoords" style="height:400px;;width:700px"></div>
         </div>
         <div class="panel">
+          <div class="panel-title">Data Table</div>
           <div id="grid6" class="grid"></div>
         </div>
       </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="lib/d3.min.js"></script>
-    <script src="lib/d3.parcoords.js"></script>
-    <script src="lib/divgrid.js"></script>
+    <script src="bundled.js"></script>
     <script src="main.js"></script>
   </body>
 </html>

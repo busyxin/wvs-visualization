@@ -139,6 +139,16 @@ input {
   margin-bottom: 10px;
 }
 
+.panel-title {
+  position: absolute;
+  left: 0;
+  width: 365px;
+  text-align: center;
+  font-size: 50px;
+  transform: rotate(-90deg) translateY(-140px);
+  opacity: .1;
+}
+
 .grid {
   max-height: 378px;
   overflow: auto;
@@ -154,7 +164,7 @@ input {
   margin-left: -325px;
 }
 
-.hide {
+.hidden {
   display: none;
 }
 

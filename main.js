@@ -72,3 +72,12 @@ $('#wave6').on('click', function() {
   $('.pure-menu-link').removeClass('pure-menu-link--selected');
   $(this).addClass('pure-menu-link--selected');
 });
+
+window.sr = ScrollReveal();
+sr.reveal('.panel', { duration: 2000 }, 350);
+
+var map2 = new Datamap({element: document.getElementById('map2')});
+var map3 = new Datamap({element: document.getElementById('map3')});
+var map4 = new Datamap({element: document.getElementById('map4')});
+var map5 = new Datamap({element: document.getElementById('map5')});
+var map6 = new Datamap({element: document.getElementById('map6')});
