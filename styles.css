@@ -51,7 +51,9 @@ ul {
   background: #222;
 }
 p {
+  font-size: 18px;
   width: 560px;
+  line-height: 1.2;
 }
 pre {
   color: #444;
@@ -85,6 +87,34 @@ input {
     color: black;
 }
 
+@keyframes breath {
+  from {transform: scale(1)}
+  to {transform: scale(1.5)}
+}
+
+.change-wave {
+  display: inline-block;
+  animation-name: breath;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  vertical-align: middle;
+  cursor: pointer;
+  transition: color .3s ease;
+}
+
+.change-wave:hover {
+  color: #00008F;
+}
+
+.change-wave.small {
+  animation: none;
+} 
+
+.change-wave.small + .change-wave.small {
+  margin-left: 2rem;
+}
+
 .wave {
   display: none;
   top: 85px;
@@ -95,11 +125,11 @@ input {
   right: 0;
   text-align: center;
   opacity: 0.6;
+  position: absolute;
 }
 
 .wave--show {
   display: block;
-  position: absolute;
 }
 
 .row, .header { clear: left; font-size: 12px; line-height: 18px; height: 18px; }
@@ -136,7 +166,7 @@ input {
   background-color: #fafafa;
   box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.1);
   padding: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 25px;
 }
 
 .panel-title {
@@ -171,6 +201,13 @@ input {
 .main {
   display: flex;
   flex-direction: column;
+  min-height: 1000px;
+  position: relative;
+}
+
+.help {
+  position: absolute;
+  bottom: 0;
 }
 
 .row:hover {
@@ -196,4 +233,14 @@ input {
   .panel + .panel {
     margin-left: 50px;
   }
+}
+
+.row.indigo { 
+  color: white;
+  background-color: indigo;
+}
+
+.hoverinfo {
+  min-width: 100px;
+  z-index: 100;
 }

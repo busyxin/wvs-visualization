@@ -10,23 +10,31 @@
   </head>
   <body>
     <h1>World Values Survey</h1>
-    <div id="wave2" class="wave wave--show">Second Wave (1990 - 1994) →</div>
-    <div id="wave3" class="wave">Third Wave (1995 - 1998) →</div>
-    <div id="wave4" class="wave">Fourth Wave (1999 - 2004) →</div>
-    <div id="wave5" class="wave">Fifth Wave (2005 - 2009) →</div>
-    <div id="wave6" class="wave">Sixth Wave (2010 - 2014)</div>
+    <div id="wave2" class="wave" style="display:block">Second Wave (1990 - 1994) <span class="change-wave" data-wave="3">&#8594;</span></div>
+    <div id="wave3" class="wave"><span class="change-wave" data-wave="2">&#8592;</span> Third Wave (1995 - 1998) <span class="change-wave" data-wave="4">&#8594;</span></div>
+    <div id="wave4" class="wave"><span class="change-wave" data-wave="3">&#8592;</span> Fourth Wave (1999 - 2004) <span class="change-wave" data-wave="5">&#8594;</span></div>
+    <div id="wave5" class="wave"><span class="change-wave" data-wave="4">&#8592;</span> Fifth Wave (2005 - 2009) <span class="change-wave" data-wave="6">&#8594;</span></div>
+    <div id="wave6" class="wave"><span class="change-wave" data-wave="5">&#8592;</span> Sixth Wave (2010 - 2014)</div>
 
     <div class="main">
 
-      <div id="wave2-block">
+      <div id="wave2-block" class="wave-block">
         <div class="panel-row">
           <div class="panel">
             <div class="panel-title">Data Map</div>
-              <div id="map2" style="position: relative; width: 600px; height: 400px;"></div>
+              <div id="map2" style="position: relative; width: 600px; height: 300px;"></div>
           </div>
           <div class="panel">
               <div class="panel-title">Analysis</div>
-            <p>Lorem ipsum something very nice yadda yadda</p>
+            <p>
+              This visualization focuses on the general aspects of a person's life such as level of <strong>education</strong>, 
+              the importance attribued to <strong>family</strong>, <strong>national identity</strong>, <strong>politics</strong>, <strong>religion</strong> and <strong>work</strong>, as well as the amount of <strong>children</strong> and the overall <strong>life satisfaction</strong>, this last one is used to colorize the lines representing each country. Countries with satisfied citizens have warmer colors and dissatisfied are colder.
+              During the second wave, data from a small sample of countries has been collected.
+              Unfortunately, many variables are incomplete, therefore the representation is 0 on the parallel coordinates.
+            </p>
+            <p>
+              <span class="change-wave small" data-wave="3">Next &#8594;</span>
+            </p>
           </div>
         </div>
   
@@ -42,22 +50,28 @@
         </div>
       </div>
 
-      <div id="wave3-block" class="hidden">
+      <div id="wave3-block" class="wave-block">
         <div class="panel-row">
           <div class="panel">
             <div class="panel-title">Data Map</div>
-              <div id="map3" style="position: relative; width: 500px; height: 300px;"></div>
+              <div id="map3" style="position: relative; width: 600px; height: 300px;"></div>
           </div>
           <div class="panel">
               <div class="panel-title">Analysis</div>
-            <p>Lorem ipsum something very nice yadda yadda</p>
+            <p>In the third wave, more consistent and rich data is available. One can quickly notice the general agreement from all the surveyed countries about <strong>the importance of the family</strong>.
+              From this data, we can see the <strong>negative correlation</strong> between <strong>education and the number of children</strong> that many experts already pointed out. More educated people rely less on their offsprings to support them.
+              Interesting enough, if we brush the parallel coordinates for <strong>life satisfaction</strong>, during the mid 90s, the lower tier corresponds to the <strong>eastern European countries</strong>. 
+            </p>
+            <p>
+              <span class="change-wave small" data-wave="2">&#8592; Previous</span><span class="change-wave small" data-wave="4">Next &#8594;</span>
+            </p>
           </div>
         </div>
 
         <div class="panel-row">
           <div class="panel">
             <div class="panel-title">Parallel Coord.</div>
-            <div id="parcoord3" class="parcoords" style="height:400px;;width:700px"></div>
+            <div id="parcoord3" class="parcoords" style="height:400px;width:700px"></div>
           </div>
           <div class="panel">
             <div id="grid3" class="grid"></div>
@@ -65,22 +79,29 @@
         </div>
       </div>
 
-      <div id="wave4-block" class="hidden">
+      <div id="wave4-block" class="wave-block">
         <div class="panel-row">
           <div class="panel">
             <div class="panel-title">Data Map</div>
-            <div id="map4" style="position: relative; width: 500px; height: 300px;"></div>
+            <div id="map4" style="position: relative; width: 600px; height: 300px;"></div>
           </div>
           <div class="panel">
-              <div class="panel-title">Analysis</div>
-            <p>Lorem ipsum something very nice yadda yadda</p>
+            <div class="panel-title">Analysis</div>
+            <p>
+              The fourth wave no longer holds data from those countries from eastern Europe, it would have been interesting to follow their response towards life satisfaction.
+              Instead, the survey turns its focus towards African and Middle East countries. If we move the axis of Family next to the Work axis, we can notice how these two values are remarkably high.
+              This explains the logic that in order to provide for the family, a stable work situation and source of income are equally important. Fortunately, <strong>no country places work above family</strong>.
+            </p>
+            <p>
+              <span class="change-wave small" data-wave="3">&#8592; Previous</span><span class="change-wave small" data-wave="5">Next &#8594;</span>
+            </p>
           </div>
         </div>
 
         <div class="panel-row">
           <div class="panel">
             <div class="panel-title">Parallel Coord.</div>
-            <div id="parcoord4" class="parcoords" style="height:400px;;width:700px"></div>
+            <div id="parcoord4" class="parcoords" style="height:400px;width:700px"></div>
           </div>
           <div class="panel">
             <div class="panel-title">Data Table</div>
@@ -89,21 +110,27 @@
         </div>
       </div>
 
-      <div id="wave5-block" class="hidden">
+      <div id="wave5-block" class="wave-block">
         <div class="panel-row">
           <div class="panel">
             <div class="panel-title">Data Map</div>
-            <div id="map5" style="position: relative; width: 500px; height: 300px;"></div>
+            <div id="map5" style="position: relative; width: 600px; height: 300px;"></div>
           </div>
           <div class="panel">
               <div class="panel-title">Analysis</div>
-            <p>Lorem ipsum something very nice yadda yadda</p>
+            <p>
+              It might not have been so pronounced before, but brushing the religion axis and reading the colors of life satisfaction, it is revealed that during the second half of the 2000s, <strong>less religious people were more satisfied with their lives</strong>. Reading the blue lines, it seems that the most <strong>frustrated citizens are starting to focus on politics</strong>. Time for a change?
+              
+            </p>
+            <p>
+              <span class="change-wave small" data-wave="4">&#8592; Previous</span><span class="change-wave small" data-wave="6">Next &#8594;</span>
+            </p>
           </div>
         </div>
         <div class="panel-row">
           <div class="panel">
             <div class="panel-title">Parallel Coord.</div>
-            <div id="parcoord5" class="parcoords" style="height:400px;;width:700px"></div>
+            <div id="parcoord5" class="parcoords" style="height:400px;width:700px"></div>
           </div>
           <div class="panel">
             <div class="panel-title">Data Table</div>
@@ -112,21 +139,27 @@
         </div>
       </div>
 
-    <div id="wave6-block" class="hidden">
+    <div id="wave6-block" class="wave-block">
       <div class="panel-row">
         <div class="panel">
           <div class="panel-title">Data Map</div>
-          <div id="map6" style="position: relative; width: 500px; height: 300px;"></div>
+          <div id="map6" style="position: relative; width: 600px; height: 300px;"></div>
         </div>
         <div class="panel">
             <div class="panel-title">Analysis</div>
-          <p>Lorem ipsum something very nice yadda yadda</p>
+          <p>
+            We can already tell by the axis of the parallel coordinates and the colouring of the map that this is one of the <strong>most complete surveys we have so far</strong>, this would be interesting to correlate by comparing it with the variable of technology, which we didn't include. Only one data is missing, the average of children in Hong Kong.
+            The most visible fact in this post crisis time, is definitely the <strong>proportional reversed rate of education vs. national pride</strong>. The higher the education, the less important is the sentiment of nation for the individuals. 
+          </p>
+          <p>
+            <span class="change-wave small" data-wave="5">&#8592; Previous</span>
+          </p>
         </div>
       </div>
       <div class="panel-row">
         <div class="panel">
           <div class="panel-title">Parallel Coord.</div>
-          <div id="parcoord6" class="parcoords" style="height:400px;;width:700px"></div>
+          <div id="parcoord6" class="parcoords" style="height:400px;width:700px"></div>
         </div>
         <div class="panel">
           <div class="panel-title">Data Table</div>
@@ -134,8 +167,16 @@
         </div>
       </div>
     </div>
+    <div class="help">
+      <div><strong>How to read the survey values:</strong></div>
+      Children: average from 0 to +6 children<br/>
+      Education: average from 0 (no education) to 8 (university)<br/>
+      Family, Nationalism, Politics, Religion and Work: average from 0 (not at all important) to 3 (very important)<br/>
+      Life Satisfaction: average from 1 (very dissatisfied) to 10 (very satisfied)
+    </div>
 
     <script src="bundled.js"></script>
+    <script src="countries.js"></script>
     <script src="main.js"></script>
   </body>
 </html>
