@@ -2,7 +2,7 @@ var render = function(csvFile, target, gridTarget) {
 
   var blue_to_brown = d3.scale.linear()
   .domain([5, 6, 7, 8])
-  .range(["red", "orange", "green", "blue"])
+  .range(["blue", "green", "orange", "red"])
   .interpolate(d3.interpolateLab);
 
   var color = function(d) { return blue_to_brown(d['Life Satisfaction']); };
@@ -20,7 +20,7 @@ var render = function(csvFile, target, gridTarget) {
 
     var grid = d3.divgrid();
     d3.select(gridTarget)
-      .datum(data.slice(0,10))
+      .datum(data)
       .call(grid)
       .selectAll(".row")
       .on({
@@ -31,7 +31,7 @@ var render = function(csvFile, target, gridTarget) {
     // update data table on brush event
     parcoords.on("brush", function(d) {
       d3.select(gridTarget)
-        .datum(d.slice(0,10))
+        .datum(d)
         .call(grid)
         .selectAll(".row")
         .on({
