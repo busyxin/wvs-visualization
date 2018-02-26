@@ -203,6 +203,7 @@ input {
   flex-direction: column;
   min-height: 1000px;
   position: relative;
+  padding-bottom: 6rem;
 }
 
 .help {
@@ -218,6 +219,9 @@ input {
 @media (min-width: 1650px) {
   h1 {
     font-size: 120px;
+  }
+  .main {
+    padding-bottom: 0;
   }
   .wave {
     top: 130px;
