@@ -29,7 +29,6 @@ var render = function(csvFile, target, gridTarget, mapTarget) {
       .selectAll(".row")
       .on({
         "click": function(d) { 
-          console.log(d)
           if (!clicked) {
             parcoords.highlight([d]);
             clicked = true;
@@ -130,4 +129,4 @@ sr.reveal('#wave2-block .panel', { duration: 2000 }, 350);
 
 setTimeout(function() {
   $(".wave-block:not(#wave2-block)").hide();  
-}, 300)
+}, 1000)
