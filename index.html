@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>World Values Survey</title>
-    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="d3.parcoords.css">
   </head>
@@ -21,97 +20,62 @@
               <li class="pure-menu-item"><a href="#" id="wave3" class="pure-menu-link">Wave 3 (1995 - 1998)</a></li>
               <li class="pure-menu-item"><a href="#" id="wave4" class="pure-menu-link">Wave 4 (1999 - 2004)</a></li>
               <li class="pure-menu-item"><a href="#" id="wave5" class="pure-menu-link">Wave 5 (2005 - 2009)</a></li>
-              <li class="pure-menu-item"><a href="#" id="wave5" class="pure-menu-link">Wave 6 (2010 - 2014)</a></li>
+              <li class="pure-menu-item"><a href="#" id="wave6" class="pure-menu-link">Wave 6 (2010 - 2014)</a></li>
             </ul>
         </div>
     </div>
 
     <div class="main">
-      <div id="example" class="parcoords" style="height:800px;"></div>
-      <div id="grid"></div>
+      <div class="panel-row">
+        <div class="panel">
+          <div id="parcoord2" class="parcoords" style="height:400px;width:700px"></div>
+        </div>
+        <div class="panel">
+          <div id="grid2" class="grid"></div>
+        </div>
+      </div>
+
+      <div class="panel-row">
+        <div class="panel">
+          <div id="parcoord3" class="parcoords" style="height:400px;;width:700px"></div>
+        </div>
+        <div class="panel">
+          <div id="grid3" class="grid"></div>
+        </div>
+      </div>
+
+      <div class="panel-row">
+        <div class="panel">
+          <div id="parcoord4" class="parcoords" style="height:400px;;width:700px"></div>
+        </div>
+        <div class="panel">
+          <div id="grid4" class="grid"></div>
+        </div>
+      </div>
+
+      <div class="panel-row">
+        <div class="panel">
+            <div id="parcoord5" class="parcoords" style="height:400px;;width:700px"></div>
+        </div>
+        <div class="panel">
+            <div id="grid5" class="grid"></div>
+        </div>
+      </div>
+
+      <div class="panel-row">
+        <div class="panel">
+          <div id="parcoord6" class="parcoords" style="height:400px;;width:700px"></div>
+        </div>
+        <div class="panel">
+          <div id="grid6" class="grid"></div>
+        </div>
+      </div>
     </div>
 
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="lib/d3.min.js"></script>
     <script src="lib/d3.parcoords.js"></script>
     <script src="lib/divgrid.js"></script>
-
-    <script id="brushing">
-      var blue_to_brown = d3.scale.linear()
-        .domain([5, 8])
-        .range(["blue", "red"]);
-
-      var color = function(d) { return blue_to_brown(d['Life Satisfaction']); };
-
-      var render = function(csvFile) {
-
-        var parcoords = d3.parcoords()("#example")
-          .color(color)
-          .alpha(0.4);
-
-        d3.csv(csvFile, function(data) {
-          parcoords
-            .data(data)
-            .render()
-            .reorderable()
-            .brushMode("1D-axes");
-
-          var grid = d3.divgrid();
-          d3.select("#grid")
-            .datum(data.slice(0,10))
-            .call(grid)
-            .selectAll(".row")
-            .on({
-              "mouseover": function(d) { parcoords.highlight([d]) },
-              "mouseout": parcoords.unhighlight
-            });
-
-          // update data table on brush event
-          parcoords.on("brush", function(d) {
-            d3.select("#grid")
-              .datum(d.slice(0,10))
-              .call(grid)
-              .selectAll(".row")
-              .on({
-                "mouseover": function(d) { parcoords.highlight([d]) },
-                "mouseout": parcoords.unhighlight
-              });
-          });
-        });
-      }
-
-      render('wave2.csv');
-
-      $('#wave2').on('click', function() {
-        render('wave2.csv');
-        parcoords.updateAxes();
-        $('.pure-menu-link').removeClass('pure-menu-link--selected');
-        $(this).addClass('pure-menu-link--selected');
-      });
-
-      $('#wave3').on('click', function() {
-        render('wave3.csv');
-        $('.pure-menu-link').removeClass('pure-menu-link--selected');
-        $(this).addClass('pure-menu-link--selected');
-      });
-
-      $('#wave4').on('click', function() {
-        render('wave4.csv');
-        $('.pure-menu-link').removeClass('pure-menu-link--selected');
-        $(this).addClass('pure-menu-link--selected');
-      });
-
-      $('#wave5').on('click', function() {
-        render('wave5.csv');
-        $('.pure-menu-link').removeClass('pure-menu-link--selected');
-        $(this).addClass('pure-menu-link--selected');
-      });
-
-      $('#wave6').on('click', function() {
-        render('wave6.csv');
-        $('.pure-menu-link').removeClass('pure-menu-link--selected');
-        $(this).addClass('pure-menu-link--selected');
-      });
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>
